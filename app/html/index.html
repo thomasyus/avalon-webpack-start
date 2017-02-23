@@ -1,39 +1,25 @@
 <!DOCTYPE html>
-<!-- saved from url=(0048)http://qti3e.github.io/Imprezi/play.html#/step-2 -->
-<html lang="en" style="height: 100%;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
-    <title>Imprezi | Player</title>
-    <link href="./index_files/bootstrap.css" rel="stylesheet">
-    <link href="./index_files/impress.css" rel="stylesheet">
-    <link href="./index_files/jquery-ui.min.css" rel="stylesheet">
-    <link href="./index_files/glyphicons-pro.css" rel="stylesheet">
-    <link href="./index_files/imprezi.css" rel="stylesheet">
-    <style id="user_style" type="text/css">/** *Insert your own css codes */</style>
-<meta content="width=device-width, minimum-scale=1, maximum-scale=1, user-scalable=no" name="viewport"></head>
-<body class="impress-supported impress-enabled impress-on-step-2" style="height: 100%; overflow: hidden; background: none 0% 0% / auto repeat scroll padding-box border-box rgb(207, 216, 220);">
-<div id="impress" style="position: absolute; transform-origin: left top 0px; transition: all 1000ms ease-in-out 500ms; transform-style: preserve-3d; top: 50%; left: 50%; transform: perspective(1000px) scale(1);"><div style="position: absolute; transform-origin: left top 0px; transition: all 1000ms ease-in-out 0ms; transform-style: preserve-3d; transform: rotateZ(0deg) rotateY(0deg) rotateX(0deg) translate3d(-1000px, 0px, 0px);"><div class="step slide present future" id="step-1" style="position: absolute; transform: translate(-50%, -50%) translate3d(230px, 123px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(1); transform-style: preserve-3d; background-color: rgb(255, 156, 0);" data-x="230" data-y="123"><div class="imprezi-editor" contenteditable="false">打算打</div></div><div class="step slide active present" data-x="1000" data-y="0" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" id="step-2" style="position: absolute; transform: translate(-50%, -50%) translate3d(1000px, 0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(1); transform-style: preserve-3d;"><div class="imprezi-editor" contenteditable="false">打算打</div></div><div class="step slide past" data-x="2000" data-y="0" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" id="step-3" style="position: absolute; transform: translate(-50%, -50%) translate3d(2000px, 0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(1); transform-style: preserve-3d;"><div class="imprezi-editor" contenteditable="false"></div></div></div></div>
-<div id="loading" style="display: none;"></div>
-<script src="./index_files/jquery-1.9.1.min.js.下载" type="application/javascript"></script>
-<script src="./index_files/jquery-ui.min.js.下载" type="application/javascript"></script>
-<script src="./index_files/bootstrap.js.下载" type="application/javascript"></script>
-<script src="./index_files/impress.js.下载" type="application/javascript"></script>
-<script type="application/javascript">
-    $(window).on("load",function(){
-        function load(){
-            if(!localStorage.slide){
-                localStorage.slide = '<div class="step slide"><h1>Hello!</h1></div>';
-            }
-            $("#user_style").html(localStorage.css);
-            $("#impress").html(localStorage.slide);
-        }
-        if($("#impress").html() == ""){
-            load();
-        }
-        impress_load();
-        setTimeout(function() {
-            $("#loading").hide();
-        }, 300);
-    });
-</script>
+<html>
+<head>
+  <title>单页Demo</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
 
-</body></html>
+<body>
+<div id="impress">
+  <div  class="step" data-x="-1000">
+    <h2>Aren’t you just <b>bored</b> with all those slides-based presentations?</h2>
+  </div>
+  <div class="step">
+    <h1>2</h1>
+  </div>
+  <div class="step" data-y="-400">
+    <h2>3</h2>
+  </div>
+</div>
+<button id="pre">pre</button>
+<button id="next">next</button>
+<script src="/dll/vendor.js"></script>
+</body>
+</html>

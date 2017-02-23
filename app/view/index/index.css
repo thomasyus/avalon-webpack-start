@@ -1,11 +1,26 @@
-body {
-  background: #1ba9ba;
+
+.future {
+  display: none;
+}
+.present .rotating {
+  transform: rotate(-10deg);
+  transition-delay: 0.25s;
 }
 
-#content {
-  padding: 5rem;
+.step {
+  width: 400px;
+  height: 400px;
+  background: #9ED99D;
+  opacity: 0;
+  transition: opacity 1s;
 }
-
-.ms-controller{
-  visibility: hidden
+.step.active {
+  opacity: 1
+}
+.impress-on-overview .step {
+  opacity: 1;
+  cursor: pointer;
+}
+.impress-not-supported .step {
+  display: inline-block;
 }
