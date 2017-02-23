@@ -1,25 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>单页Demo</title>
+  <title>TV</title>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-
 <body>
-<div id="impress">
-  <div  class="step" data-x="-1000">
-    <h2>Aren’t you just <b>bored</b> with all those slides-based presentations?</h2>
-  </div>
-  <div class="step">
-    <h1>2</h1>
-  </div>
-  <div class="step" data-y="-400">
-    <h2>3</h2>
+<div class="reveal">
+  <div class="slides">
+    <section>
+      <h2>Slide 0</h2>
+      <a href="http://www.baidu.com">www</a>
+    </section>
+    <section id="fragments" class="present" data-autoslide="1000">
+      <section>
+        <h2>Slide 1</h2>
+        <h2 class="fragment" data-fragment-index="0">Slide 2</h2>
+
+        <h2 class="fragment" data-fragment-index="1">Slide 3</h2>
+      </section>
+      <section>
+        2
+      </section>
+    </section>
+    <section>
+      233
+    </section>
   </div>
 </div>
-<button id="pre">pre</button>
-<button id="next">next</button>
-<script src="/dll/vendor.js"></script>
+<script src="./dll/vendor.js"></script>
 </body>
 </html>

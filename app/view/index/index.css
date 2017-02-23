@@ -1,26 +1,25 @@
-
-.future {
-  display: none;
-}
-.present .rotating {
-  transform: rotate(-10deg);
-  transition-delay: 0.25s;
+body {
+  background: #666;
+  color: #f7fbfc;
 }
 
-.step {
-  width: 400px;
-  height: 400px;
-  background: #9ED99D;
-  opacity: 0;
-  transition: opacity 1s;
+h2 {
+  font-size: 30px !important;
 }
-.step.active {
-  opacity: 1
+
+.slides section{
+
+
+  height: 100%;
+
 }
-.impress-on-overview .step {
-  opacity: 1;
-  cursor: pointer;
+
+.reveal .progress span{
+  background: #1b91ff;
 }
-.impress-not-supported .step {
-  display: inline-block;
+.slides>section:nth-child(1){
+  background: #1b91ff;
 }
+.slides>section:nth-child(2){
+   background: #9ED99D;
+ }
