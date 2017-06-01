@@ -81,7 +81,7 @@ module.exports = (dev) => {
       include: path,
       loaders: require('extract-text-webpack-plugin').extract({
         fallback: 'style-loader',
-        use: loader ? [cssRules, loader, 'postcss-loader'] : [cssRules, 'postcss-loader']
+        use: loader ? [cssRules, 'postcss-loader',loader] : [cssRules, 'postcss-loader']
       })
     })
   }

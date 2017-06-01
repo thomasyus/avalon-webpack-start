@@ -8,7 +8,8 @@ const app = express();
 // Apply gzip compression
 //const compress      = require('compression')
 //app.use(compress());
-
+const proxy = require('express-http-proxy');
+const proxyConfig = require('./proxy');
 /** -----------------------------------
  * Apply Webpack HMR Middleware
  * */
@@ -20,7 +21,11 @@ if (process.env.NODE_ENV === 'development') {
     quiet     : true,
     stats     : {colors: true}
   }));
-  
+  console.log('实现代理转发');
+  for (var i in proxyConfig) {
+    app.use(i,proxy(proxyConfig[i]))
+  }
+  // app.use('/proxy', proxy('www.163.com'));
   app.use(require('webpack-hot-middleware')(compiler));
   
   app.use('/', express.static(files.buildPath));

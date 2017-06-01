@@ -1,0 +1,5 @@
+body {
+    &:after {
+        content:'我是JS注入的scss'
+    }
+}

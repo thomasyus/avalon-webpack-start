@@ -1,5 +1,4 @@
 console.log('index.js:引入成功');
-
 let vm = avalon.define({
   $id  : "test",
   name : "司徒正美",

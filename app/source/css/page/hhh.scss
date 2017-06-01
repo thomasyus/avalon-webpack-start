@@ -1,0 +1,13 @@
+@import "../font/icon/iconfont.css";
+@import "./parts/normalize.scss";
+
+@import "./lib/lib-rem.scss";
+
+body {
+    width:375px;
+    display: flex;
+    margin:0 auto;
+    div {
+        color:#fff;
+    }
+}

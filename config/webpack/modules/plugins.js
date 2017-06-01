@@ -65,7 +65,21 @@ module.exports = [
             remPrecision: 8,
             baseDpr     : 2 // 默认2倍视角
           })*/
-        ] : [require('autoprefixer')({
+        ] : base.projectType=='mobile'?[
+          // require("postcss-scss"),
+          require("postcss-import")({root: files.cssPath}),
+          require("postcss-extend")(),
+          require("postcss-url")(),
+          require("postcss-px2rem")({
+            remUnit     : 20,
+            remPrecision: 8,
+            baseDpr     : 2 // 默认2倍视角
+          }),
+          require('autoprefixer')({
+          browsers: ['> 1%', 'last 5 versions', 'Firefox ESR'],
+          cascade: false
+        })
+        ]:[require('autoprefixer')({
           browsers: ['> 1%', 'last 5 versions', 'Firefox ESR'],
           cascade: false
         })]

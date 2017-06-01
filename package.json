@@ -74,7 +74,15 @@
   },
   "homepage": "https://github.com/sayll/avalon-webpack-start#readme",
   "dependencies": {
-    "avalon2": "^2.2.4"
+    "avalon2": "^2.2.4",
+    "express-http-proxy": "^1.0.3",
+    "jquery": "^3.2.1",
+    "postcss-extend": "^1.0.5",
+    "postcss-import": "^10.0.0",
+    "postcss-px2rem": "^0.3.0",
+    "postcss-scss": "^1.0.0",
+    "postcss-url": "^6.1.0",
+    "sass-loader": "^6.0.5"
   },
   "devDependencies": {
     "babel-core": "^6.23.1",
