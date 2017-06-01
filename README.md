@@ -61,6 +61,7 @@
 │           ├── index.css    # 如是多页应用，可设置对应的CSS文件，直接匹配。
 │           └── other **     # 页面的其他资源文件，通过index.js引入
 └── tests                    # 单元测试
+
 ```
 
 ## 项目启动
@@ -143,7 +144,7 @@ $ npm run cnpm
 
    - 创建单页应用，只需一个入口文件`index.html`即可。
 
-2. 引入DLL的JS,默认地址为``
+2. 引入DLL的JS,默认地址为`<script src="/dll/vendor.js"></script>`
 
 3. 配置JS,CSS资源文件，文件地址：`app/view`
 
@@ -266,10 +267,11 @@ window.$ = jquery;
       ​
 
 5. 修改目录结构
-   {0}. 文件地址: `config/webpack/base/files.js`
+
+   {0}. . 文件地址: `config/webpack/base/files.js`
       {0}. 此文件使webpack正确索引资源文件，如需调整资源目录，请使目录资源与`files.js`中的配置一一对应。 具体请查看源码
 
-6. 单元测试(更多说明)
+6. 单元测试
 
 
 
