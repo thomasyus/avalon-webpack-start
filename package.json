@@ -77,6 +77,8 @@
     "avalon2": "^2.2.4",
     "express-http-proxy": "^1.0.3",
     "jquery": "^3.2.1",
+    "node-sass": "^4.5.3",
+    "page": "^1.7.1",
     "postcss-extend": "^1.0.5",
     "postcss-import": "^10.0.0",
     "postcss-px2rem": "^0.3.0",

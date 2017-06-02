@@ -1,13 +1,7 @@
 @import "../font/icon/iconfont.css";
 @import "./parts/normalize.scss";
-
-@import "./lib/lib-rem.scss";
-
+// 手机H5需要import lib-rem.scss以进行不同分辨率的适配;
+// @import "./lib/lib-rem.scss"; 
 body {
-    width:375px;
-    display: flex;
-    margin:0 auto;
-    div {
-        color:#fff;
-    }
+    margin: 0 auto;
 }
