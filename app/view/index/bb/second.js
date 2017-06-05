@@ -25,11 +25,24 @@ var vm = avalon.define({
     destory: function() {
         avalon.log("second destory" + +new Date());
     },
-    ready: function(e) {
-        avalon.log("second ready" + +new Date());
-        e.vmodel.$watch('currentPage', function(a) {
-            vm.start = a - 1;
-        })
+    pageConfig: {
+        onReady: function(e) {
+            avalon.log("second ready" + +new Date());
+            avalon.vmodels['tablePager'] = e.vmodel;
+            e.vmodel.$watch('currentPage', function(a) {
+                vm.start = a - 1;
+            })
+        },
+        onViewChange: function(e) {
+            console.log('视图变化', e);
+        },
+        onDispose: function(e) {
+            console.log('销毁pager', e);
+            delete avalon.vmodels['tablePager'];
+        }
+    },
+    changePage: function() {
+        console.log(111);
     },
     ddd: 'bbb'
 });
@@ -38,13 +51,16 @@ avalon.component('ms-grid', {
     template: heredoc(function() {
         /*
          <div class="grid">
+         <div><slot name="changePage"/></div>
          <div><slot name="header"/></div>
          <div><slot name="tbody"/></div>
          <div class="pager"><slot name="pager" /></div>
          </div>
          */
     }),
-    defaults: {}
+    defaults: {
+
+    }
 });
 avalon.ready(function() {
     avalon.vmodels['root'].headerPage = '<p>this is headerPage,second</p>';

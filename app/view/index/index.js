@@ -8,6 +8,7 @@ var root = avalon.define({
     getRootFun: function() {
         avalon.log('Root|' + new Date());
     },
+    rootStr: '父级Controller',
     headerPage: '<p>this is headerPage</p>', //头部页面
     footerPage: '<p>this is footerPage</p>', //尾部页面
     currPath: '', //当前路径k
@@ -52,7 +53,7 @@ avalon.component('ms-view', {
 
 function getPage(path) {
     path = path.slice(1);
-    var html = '<wbr is="ms-view" class="view-container" ms-widget="{path:\'' + path + '\',page: @page}"><wbr>';
+    var html = '<template is="ms-view" class="view-container" ms-widget="{path:\'' + path + '\',page: @page}"></template>';
     return html
 }
 
@@ -70,7 +71,9 @@ pages.forEach(function(pathname) {
 avalon.history.start({
     root: "/"
 })
-avalon.router.navigate('/aa/first', 1);
+if (!location.hash) {
+    avalon.router.navigate('/aa/first', 2);
+}
 avalon.ready(function() {
     avalon.scan(document.documentElement);
 });

@@ -17,6 +17,9 @@ avalon.component("ms-pager", {
         currentPage: 1,
         showPage: 7,
         pages: [1, 2, 3, 4, 5, 6, 7],
+        onReady: function() {
+
+        },
         gotoPage: function(page, e) {
             this.currentPage = page;
             this.pages = this.getPages();

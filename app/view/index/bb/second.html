@@ -62,7 +62,8 @@
             float: right;
         }
     </style>
-    <xmp cached="true" :widget="{id:'grid',is:'ms-grid'}">
+    <xmp :widget="{id:'grid',is:'ms-grid'}">
+        <div slot="changePage" :click="changePage">修改分页</div>
         <table slot='header' class="header">
             <tr>
                 <td :for="el in @header" style="width:200px">
@@ -75,6 +76,6 @@
                 <td :for="el in obj | selectBy(@header)" style="width:200px">{{el}}</td>
             </tr>
         </table>
-        <ms-pager slot="pager" :widget="{onReady:@ready}" />
+        <ms-pager slot="pager" :widget="@pageConfig" />
     </xmp>
 </div>
