@@ -216,8 +216,6 @@ window.$ = jquery;
     $ yarn add less-loader less           # yarn用户
     ```
 
-    ​
-
     - 使用`sass|scss`下载依赖
 
     ```
@@ -227,7 +225,7 @@ window.$ = jquery;
     ```
 
     - 样式文件后缀需要与`cssType`对应;
-      - 如使用`less`，请将`app`内部所有的样式文件后缀修改为`.less`
+      - 如使用`scss`，请将`app`内部所有的样式文件后缀修改为`.scss`
 
   - CDN修改项： `cdnPath`
 
@@ -268,7 +266,7 @@ window.$ = jquery;
 
 5. 修改目录结构
 
-   {0}. . 文件地址: `config/webpack/base/files.js`
+   {0}. 文件地址: `config/webpack/base/files.js`
       {0}. 此文件使webpack正确索引资源文件，如需调整资源目录，请使目录资源与`files.js`中的配置一一对应。 具体请查看源码
 
 6. 单元测试
